@@ -1,0 +1,406 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    background: aliceblue;
+    margin: 0;
+    padding: 20px
+}
+
+.app {
+    max-width: 920px;
+    margin: 0 auto
+}
+
+.top {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.logo {
+    font-size: 28px
+}
+
+.title {
+    font-size: 20px;
+    color: midnightblue;
+    font-weight: 700
+}
+
+.subtitle {
+    font-size: 12px;
+    color: slategray
+}
+
+.card {
+    background: seashell;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 14px;
+    transition: transform 160ms ease, box-shadow 160ms ease
+}
+
+.card:focus-within {
+    border-color: lightsteelblue
+}
+
+/* creator */
+.creator .row {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.creator .row input[type="text"],
+.creator .row input,
+.creator .row select,
+.creator .row textarea {
+    padding: 9px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 140ms ease, box-shadow 140ms ease
+}
+
+.creator .row input::placeholder {
+    color: darkgray
+}
+
+.input-url {
+    flex: 2;
+    min-width: 150px
+}
+
+.input-title {
+    flex: 1;
+    min-width: 120px
+}
+
+.select-color {
+    width: 140px;
+    padding: 8px
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 120ms ease, box-shadow 120ms ease
+}
+
+.btn:active {
+    transform: translateY(1px)
+}
+
+/* button styles */
+.btn-save {
+    background: lightgreen;
+    color: darkslategray
+}
+
+.btn-save:hover {
+    filter: brightness(0.98);
+    box-shadow: 0 6px 10px lightgray
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid lightgray;
+    padding: 6px 10px;
+    border-radius: 8px
+}
+
+.btn-outline:hover {
+    background: whitesmoke
+}
+
+.btn-primary {
+    background: steelblue;
+    color: white
+}
+
+.btn-primary:hover {
+    background: midnightblue
+}
+
+.btn-danger {
+    background: indianred;
+    color: white
+}
+
+.btn-danger:hover {
+    background: firebrick
+}
+
+/* second row */
+.row-2 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px
+}
+
+.input-search {
+    flex: 1;
+    padding: 9px;
+    border-radius: 8px;
+    border: 1px solid lightgray
+}
+
+.input-search::placeholder {
+    color: darkgray
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+/* links area */
+.links .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 10px
+}
+
+.section-title {
+    font-weight: 600;
+    color: darkslateblue
+}
+
+.small-note {
+    font-size: 12px;
+    color: gray
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.link-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    transition: transform 140ms ease, box-shadow 140ms ease
+}
+
+.link-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px lightgray
+}
+
+.link-left {
+    flex: 1;
+    min-width: 0
+}
+
+.link-title {
+    font-weight: 700;
+    color: darkslateblue;
+    word-break: break-word
+}
+
+.link-url {
+    display: block;
+    font-size: 13px;
+    color: darkslategray;
+    word-break: break-all;
+    margin-top: 6px;
+    text-decoration: none
+}
+
+.link-url:hover {
+    text-decoration: underline
+}
+
+.link-meta {
+    font-size: 12px;
+    color: gray;
+    margin-top: 6px
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 12px
+}
+
+/* icons */
+.icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background 120ms ease
+}
+
+.icon-btn:hover {
+    background: whitesmoke
+}
+
+.icon-star {
+    font-size: 18px
+}
+
+.icon-trash {
+    font-size: 16px;
+    color: indianred
+}
+
+.icon-trash:hover {
+    background: mistyrose;
+    border-radius: 6px
+}
+
+/* favorite marker */
+.favorite {
+    box-shadow: 0 12px 30px lightgray;
+    border: 1px solid lightgray
+}
+
+/* empty and footer */
+.empty-note {
+    color: slategray;
+    font-style: italic;
+    margin-top: 10px
+}
+
+.footer {
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.12)
+}
+
+/* this rgba used only for backdrop opacity; keep if acceptable */
+.modal.show {
+    display: flex
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 520px;
+    background: white;
+    border-radius: 10px;
+    padding: 14px;
+    border: 1px solid lightgray;
+    box-shadow: 0 12px 36px lightgray;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: transform 200ms ease, opacity 200ms ease
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+    opacity: 1
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.modal-title {
+    font-weight: 700;
+    color: darkslateblue
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px
+}
+
+.import-area {
+    width: 100%;
+    height: 160px;
+    padding: 8px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    resize: vertical
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px
+}
+
+/* focus states for accessibility */
+input:focus,
+textarea:focus,
+select:focus,
+.btn:focus,
+.icon-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px lightyellow
+}
+
+/* small screens */
+@media (max-width:640px) {
+    .creator .row {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .row-2 {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .actions {
+        justify-content: flex-end;
+        flex-wrap: wrap
+    }
+
+    .title {
+        font-size: 18px
+    }
+
+    .card {
+        padding: 12px
+    }
+
+    .link-card {
+        padding: 10px
+    }
+}
+
+/* tiny niceties */
+.hidden {
+    display: none
+}

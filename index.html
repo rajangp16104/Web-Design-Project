@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Save-My-Links Board</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header class="top">
+            <div class="logo">🔖</div>
+            
+                <div class="title">Save-My-Links Board</div>
+                <div class="meta">
+                    <div class="tagline">Save and organize URLs locally in your browser</div>
+                    <div class="stats" aria-live="polite">
+                        <div class="stat">
+                            <div class="stat-value" id="totalCount">0</div>
+                            <div class="stat-label">links</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" id="favCount">0</div>
+                            <div class="stat-label">favorites</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="creator card">
+            <div class="row">
+                <input class="input-url" placeholder="Paste URL (https://...)" />
+                <input class="input-title" placeholder="Title (optional)" />
+                <select class="select-color">
+                    <option value="lightblue">Study</option>
+                    <option value="lightgreen">Project</option>
+                    <option value="lightpink">Personal</option>
+                    <option value="khaki">Work</option>
+                    <option value="lightgray">Misc</option>
+                </select>
+                <button class="btn btn-save">Save</button>
+            </div>
+
+            <div class="row row-2">
+                <input class="input-search" placeholder="Search by title or URL" />
+                <div class="actions">
+                    <button class="btn btn-outline btn-export">Export JSON</button>
+                    <button class="btn btn-outline btn-import">Import JSON</button>
+                    <button class="btn btn-danger btn-clear">Clear All</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="links card">
+            <div class="section-head">
+                <div class="section-title">Saved Links</div>
+                <div class="small-note">Click star to favorite · click trash to delete</div>
+            </div>
+            <div id="linksList" class="links-list"></div>
+            <div id="emptyMsg" class="empty-note">No links yet. Add one above.</div>
+        </section>
+
+        <footer class="footer">Saved in your browser only. Export to move between devices.</footer>
+    </div>
+
+    <div id="importModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Import Links (paste JSON)</div>
+                <button class="modal-close" aria-label="close">✕</button>
+            </div>
+            <textarea class="import-area" placeholder='Paste exported JSON here'></textarea>
+            <div class="modal-actions">
+                <button class="btn btn-outline modal-cancel">Cancel</button>
+                <button class="btn btn-primary modal-do-import">Import</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
